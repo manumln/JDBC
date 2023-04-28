@@ -1,13 +1,13 @@
 drop table if EXISTS  USUARIOS;
 CREATE TABLE USUARIOS (
   id_usuario INTEGER PRIMARY KEY ,
-  nombre TEXT CHECK (nombre ~ '^[a-zA-Z ]+$'),
+  nombre TEXT CHECK (nombre regexp '^[a-zA-Z ]+$'),
   dni TEXT CHECK(length(dni) = 8),
-  direccion TEXT CHECK (direccion ~ '^[a-zA-Z0-9 .,-]+$'),
+  direccion TEXT CHECK (direccion regexp '^[a-zA-Z0-9 .,-]+$'),
   telefono TEXT CHECK(length(dni) = 9),
   email TEXT CHECK(email LIKE '%@%.%'),
   rol TEXT  check(rol IN ('administrador','usuario''invitado')),
-  contrasenna TEXT CHECK (contrasenna ~ '^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$')
+  contrasenna TEXT CHECK (contrasenna regexp '^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$')
 );
 
 
@@ -20,6 +20,6 @@ CREATE TABLE RESERVAS(
   email TEXT CHECK(email LIKE '%@%.%'),
   motivo TEXT,
   adjudicada INTEGER,
-  id_usuario TEXT CHECK (id_usuario ~ '^[a-zA-Z0-9]+$'),
+  id_usuario TEXT CHECK (id_usuario regexp '^[a-zA-Z0-9]+$'),
   FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
