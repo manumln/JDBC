@@ -1,4 +1,4 @@
-package USUARIOS;
+package modelo.dao;
 
 public class Usuarios {
     private int id_usuario;

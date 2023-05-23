@@ -1,6 +1,5 @@
-package USUARIOS;
+package modelo.dao;
 
-import USUARIOS.Usuarios;
 public interface DAOUsuarios {
     public int id_usuario();
     public String dni();
