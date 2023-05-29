@@ -1,10 +1,10 @@
-package vista.app5;
+package vista.app1;
 
 import controlador.ModeloTabla;
 import javax.swing.*;
 import java.awt.*;
 
-public class App extends JFrame {
+public class App1 extends JFrame {
 
     private JPanel mainPanel;
     private JTextField textField6;
@@ -17,7 +17,7 @@ public class App extends JFrame {
     private JTable tabla;
     private JButton botonAvanzar;
 
-    public App() {
+    public App1() {
         tabla.setModel(new ModeloTabla());
         Container container = getContentPane();
         container.add(mainPanel);
@@ -38,6 +38,6 @@ public class App extends JFrame {
     }
 
     public static void main(String[] args) {
-        (new App()).setVisible(true);
+        (new App1()).setVisible(true);
     }
 }
