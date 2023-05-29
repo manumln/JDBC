@@ -1,8 +1,10 @@
 package controlador;
 
+import modelo.modelo.dao.Usuario;
 import modelo.modelo.dao.UsuarioDAO;
 import vista.app1.App1;
 
+import javax.swing.*;
 import java.sql.SQLException;
 
 public class Controlador {
@@ -18,6 +20,37 @@ public class Controlador {
 
     private void registrarEventosBoton() {
         vista.getBotonBorrar().addActionListener(actionEvent -> borrarFila());
+        vista.getBotonActualizar().addActionListener(actionEvent -> actualizarFila());
+    }
+    private void actualizarFila() {
+        JOptionPane.showMessageDialog(null, "Cada vez que cambias ", "alert", JOptionPane.ERROR_MESSAGE);
+        int row = vista.getTabla().getSelectedRow();
+        //System.out.println("fila: " + row);
+        String sID = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[0];
+        String nombre = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[1];
+        String dni = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[2];
+        String direccion = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[3];
+        String telefono = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[4];
+        String email = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[5];
+        String rol = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[6];
+        String contrasenna = ((ModeloTabla) vista.getTabla().
+                getModel()).getData().get(row)[7];
+
+        System.out.println(sID + "-" + nombre + "-" + dni);
+        int id = Integer.parseInt(sID);
+        Usuario usuario = new Usuario(nombre,dni,direccion,telefono,email,rol,contrasenna);
+        try {
+            dao.actualizarUsuarioPorId(usuario, id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

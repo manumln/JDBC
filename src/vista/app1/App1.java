@@ -40,4 +40,8 @@ public class App1 extends JFrame {
     public static void main(String[] args) {
         (new App1()).setVisible(true);
     }
+
+    public JButton getBotonActualizar() {
+        return botonActualizar;
+    }
 }

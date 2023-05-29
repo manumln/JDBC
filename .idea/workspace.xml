@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12d6c392-fe2d-4596-8eee-193ac9a1f4b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DBs/usuarios.db" beforeDir="false" afterPath="$PROJECT_DIR$/DBs/usuarios.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/ModeloTabla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/ModeloTabla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/conexion/ConexionSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/conexion/ConexionSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/app1/App1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/app1/App1.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vista/app1/App1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/app1/App1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,9 +41,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/matinal/Desktop/JDBC",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
