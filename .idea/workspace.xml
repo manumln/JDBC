@@ -6,18 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="12d6c392-fe2d-4596-8eee-193ac9a1f4b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/495c302a84af98a5b0c227ee151874875266d305" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64a1b7d1bf5ba1bc4d515e91a2e8b9fc6910089b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/9/495c302a84af98a5b0c227ee151874875266d305" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/4/64a1b7d1bf5ba1bc4d515e91a2e8b9fc6910089b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBs/usuario.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBs/usuarios.db" beforeDir="false" afterPath="$PROJECT_DIR$/DBs/usuarios.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controlador/ModeloTabla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/ModeloTabla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/conexion/ConexionSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/conexion/ConexionSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/modelo/dao/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/modelo/dao/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modelo/modelo/dao/UsuarioDAOImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/modelo/dao/UsuarioDAOImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/app5/App5.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/app5/App5.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,34 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mpmol\IdeaProjects\guiII" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modelo.Test" />
+      <module name="JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
