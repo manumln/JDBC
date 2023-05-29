@@ -7,18 +7,24 @@ import java.awt.*;
 public class App1 extends JFrame {
 
     private JPanel mainPanel;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField1;
+    private JTextField textoEmail;
+    private JTextField textoDNI;
+    private JTextField textoID;
     private JButton botonInsertar;
     private JButton botonBorrar;
     private JButton botonAtras;
     private JButton botonActualizar;
-    private JTable tabla;
+    private JTable tablaDatos;
     private JButton botonAvanzar;
+    private JTextField textoNombre;
+    private JTextField textoDireccion;
+    private JTextField textoTelefono;
+    private JTextField textoRol;
+    private JTextField textoContrasenna;
+
 
     public App1() {
-        tabla.setModel(new ModeloTabla());
+        tablaDatos.setModel(new ModeloTabla());
         Container container = getContentPane();
         container.add(mainPanel);
         setTitle("Ejemplo de tabla");
@@ -29,12 +35,44 @@ public class App1 extends JFrame {
 
     }
 
+    public JTextField getTextoContrasenna() {
+        return textoContrasenna;
+    }
+
+    public JTextField getTextoEmail() {
+        return textoEmail;
+    }
+
+    public JTextField getTextoDNI() {
+        return textoDNI;
+    }
+
+    public JTextField getTextoID() {
+        return textoID;
+    }
+
+    public JTextField getTextoNombre() {
+        return textoNombre;
+    }
+
+    public JTextField getTextoDireccion() {
+        return textoDireccion;
+    }
+
+    public JTextField getTextoTelefono() {
+        return textoTelefono;
+    }
+
+    public JTextField getTextoRol() {
+        return textoRol;
+    }
+
     public JButton getBotonBorrar() {
         return botonBorrar;
     }
 
-    public JTable getTabla() {
-        return tabla;
+    public JTable getTablaDatos() {
+        return tablaDatos;
     }
 
     public static void main(String[] args) {
@@ -43,5 +81,9 @@ public class App1 extends JFrame {
 
     public JButton getBotonActualizar() {
         return botonActualizar;
+    }
+
+    public JButton getBotonInsertar() {
+        return botonInsertar;
     }
 }

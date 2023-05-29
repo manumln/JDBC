@@ -12,7 +12,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="59da9" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+      <component id="59da9" class="javax.swing.JTextField" binding="textoEmail">
         <constraints>
           <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
@@ -23,7 +23,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="e6d96" class="javax.swing.JTextField" default-binding="true">
+      <component id="e6d96" class="javax.swing.JTextField" binding="textoTelefono">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
@@ -33,7 +33,7 @@
           <background color="-1446932"/>
         </properties>
       </component>
-      <component id="56994" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+      <component id="56994" class="javax.swing.JTextField" binding="textoDNI">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
@@ -43,7 +43,7 @@
           <background color="-1446932"/>
         </properties>
       </component>
-      <component id="75b86" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="75b86" class="javax.swing.JTextField" binding="textoID">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="10" height="30"/>
@@ -95,7 +95,7 @@
           <text value="ID_USUARIO"/>
         </properties>
       </component>
-      <component id="1fcc3" class="javax.swing.JTextField" default-binding="true">
+      <component id="1fcc3" class="javax.swing.JTextField" binding="textoRol">
         <constraints>
           <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
@@ -106,7 +106,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="3bbe3" class="javax.swing.JTextField" default-binding="true">
+      <component id="3bbe3" class="javax.swing.JTextField" binding="textoContrasenna">
         <constraints>
           <grid row="9" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
@@ -165,7 +165,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="7dcac" class="javax.swing.JTable" binding="tabla">
+          <component id="7dcac" class="javax.swing.JTable" binding="tablaDatos">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>
@@ -224,7 +224,7 @@
           <text value="CONTRASEÑA"/>
         </properties>
       </component>
-      <component id="21b52" class="javax.swing.JTextField" default-binding="true">
+      <component id="21b52" class="javax.swing.JTextField" binding="textoNombre">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
@@ -235,7 +235,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="43057" class="javax.swing.JTextField" default-binding="true">
+      <component id="43057" class="javax.swing.JTextField" binding="textoDireccion">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="187" height="30"/>
