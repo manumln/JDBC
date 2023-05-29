@@ -1,7 +1,5 @@
 
-G
-SQL/proyecto_sqlite.sql,9\d\9dda1ef7c759a707178938b9b615de8c716166c3
-H
-src/gui/UsuaroioGUI.java,7\5\75f076da1ca4c7e7217b2256524c4e5b11477916
-H
-src/gui/UsuaroioGUI.form,c\1\c17fa35a7e95426b8c28f138a54c09d713bf6704
+<
+src/App.java,4\9\495c302a84af98a5b0c227ee151874875266d305
+?
+DBs/usuarios.db,6\4\64a1b7d1bf5ba1bc4d515e91a2e8b9fc6910089b
