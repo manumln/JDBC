@@ -1,15 +1,15 @@
 package controlador;
 
 import modelo.modelo.dao.UsuarioDAO;
-import vista.app5.App;
+import vista.app1.App1;
 
 import java.sql.SQLException;
 
 public class Controlador {
     private UsuarioDAO dao;
-    private App vista;
+    private App1 vista;
 
-    public Controlador(UsuarioDAO dao, App vista) {
+    public Controlador(UsuarioDAO dao, App1 vista) {
         this.dao = dao;
         this.vista = vista;
         iniciarApp();

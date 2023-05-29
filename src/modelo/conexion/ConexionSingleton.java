@@ -14,7 +14,7 @@ public class ConexionSingleton {
         SQLiteConfig config = new SQLiteConfig();
         config.enforceForeignKeys(true);
         connection = DriverManager.getConnection(
-                "jdbc:sqlite:usuarios.db", config.toProperties());
+                "jdbc:sqlite:DBs/usuarios.db", config.toProperties());
     }
 
     public static ConexionSingleton getConexionSingleton() throws SQLException {

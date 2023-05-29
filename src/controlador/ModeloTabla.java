@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ModeloTabla extends AbstractTableModel implements TableModelListener {
     private UsuarioDAO dao = new UsuarioDAOImp();
-    private String[] columnNames = {"id_usuario","nombre","dni","direccion","telefono","email","direccion","rol","contrasenna"};
+    private String[] columnNames = {"id_usuario","nombre","dni","direccion","telefono","email","rol","contrasenna"};
 
     private List<String[]> data;
 
