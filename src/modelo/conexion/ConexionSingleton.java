@@ -1,4 +1,4 @@
-package modelo.conexión;
+package modelo.conexion;
 
 import org.sqlite.SQLiteConfig;
 
@@ -6,23 +6,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexiónSingleton {
-    private static ConexiónSingleton ConexiónSingleton;
+public class ConexionSingleton {
+    private static ConexionSingleton conexionSingleton;
     private Connection connection;
-    private ConexiónSingleton() throws SQLException {
+    private ConexionSingleton() throws SQLException {
         Runtime.getRuntime().addShutdownHook(new MyShutdownHook());
         SQLiteConfig config = new SQLiteConfig();
         config.enforceForeignKeys(true);
         connection = DriverManager.getConnection(
-                "jdbc:sqlite:DBs/usuario.db", config.toProperties());
+                "jdbc:sqlite:usuarios.db", config.toProperties());
     }
 
-    public static ConexiónSingleton getConexiónSingleton() throws SQLException {
+    public static ConexionSingleton getConexionSingleton() throws SQLException {
 
-        if (ConexiónSingleton == null) {
-            ConexiónSingleton = new ConexiónSingleton();
+        if (conexionSingleton == null) {
+            conexionSingleton = new ConexionSingleton();
         }
-        return ConexiónSingleton;
+        return conexionSingleton;
     }
 
     public Connection getConnection() {
@@ -33,13 +33,12 @@ public class ConexiónSingleton {
         @Override
         public void run() {
             try {
-                Connection Conexión = getConexiónSingleton().getConnection();
-                if (Conexión != null)
-                    Conexión.close();
+                Connection conexion = getConexionSingleton().getConnection();
+                if (conexion != null)
+                    conexion.close();
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
         }
-
     }
 }

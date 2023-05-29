@@ -1,20 +1,0 @@
-
-o	java:S116
-"SRename this field "Anterior" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¹‚ì8ÉõÈÈƒ1
-I
-java:S1068".Remove this unused "textField2" private field.(ˆûÓ‘ûÿÿÿÿ
-I
-java:S1068".Remove this unused "textField4" private field.(ÌÁ¿Šúÿÿÿÿ
-I
-java:S1068".Remove this unused "textField5" private field.(ó²ÀÁşÿÿÿÿ
-O
-java:S1068	"2Remove this unused "passwordField1" private field.(‹ÎÛŸ8£‘¾Èƒ1
-I
-java:S1068
-",Remove this unused "Anterior" private field.(è¹‚ì8ÎõÈÈƒ1
-P
-java:S1068".Remove this unused "textField6" private field.(¥¼çâıÿÿÿÿ8ÜøÖÈƒ1
-K
-java:S1068".Remove this unused "textField7" private field.(£çŠÔ8¿¬×Èƒ1
-K
-java:S1068".Remove this unused "textField1" private field.(×ŒàÌ8¿¬×Èƒ1
