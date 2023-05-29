@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ModeloTabla extends AbstractTableModel implements TableModelListener {
+public class ModeloTabla extends AbstractTableModel {
     private UsuarioDAO dao = new UsuarioDAOImp();
-    private String[] columnNames = {"id_usuario","nombre","dni","direccion","telefono","email","rol","contrasenna"};
+    private String[] columnNames = {"id_usuario", "nombre", "dni", "direccion", "telefono", "email", "rol", "contrasenna"};
 
     private List<String[]> data;
 
@@ -50,10 +50,25 @@ public class ModeloTabla extends AbstractTableModel implements TableModelListene
     }
 
 
-
+    @Override
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+        if (columnIndex == 0)
+            return false;
+        return true;
+    }
 
     @Override
-    public void tableChanged(TableModelEvent tableModelEvent) {
-
+    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+        String[] usuario = data.get(rowIndex);
+      /*  System.out.println(Arrays.toString(usuario));
+        System.out.println(aValue);*/
+        if (columnIndex == 1) {
+            usuario[1] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
+        if (columnIndex == 2) {
+            usuario[2] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
     }
 }

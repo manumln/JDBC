@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="12d6c392-fe2d-4596-8eee-193ac9a1f4b7" name="Changes" comment="Implementacion del boton Insertar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBs/usuarios.db" beforeDir="false" afterPath="$PROJECT_DIR$/DBs/usuarios.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/app1/App1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/app1/App1.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/app1/App1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/app1/App1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/ModeloTabla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/ModeloTabla.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
