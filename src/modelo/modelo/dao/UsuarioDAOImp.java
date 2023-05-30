@@ -59,6 +59,7 @@ public class UsuarioDAOImp implements UsuarioDAO{
         sentencia.setString(5, newUsuario.getEmail());
         sentencia.setString(6, newUsuario.getRol());
         sentencia.setString(7, newUsuario.getContrasenna());
+        sentencia.setInt(8, id);
        int exito = sentencia.executeUpdate();
        if (sentencia != null)
            sentencia.close();

@@ -70,5 +70,25 @@ public class ModeloTabla extends AbstractTableModel {
             usuario[2] = aValue.toString();
             fireTableCellUpdated(rowIndex, columnIndex);
         }
+        if (columnIndex == 3) {
+            usuario[3] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
+        if (columnIndex == 4) {
+            usuario[4] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
+        if (columnIndex == 5) {
+            usuario[5] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
+        if (columnIndex == 6) {
+            usuario[6] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
+        if (columnIndex == 7) {
+            usuario[7] = aValue.toString();
+            fireTableCellUpdated(rowIndex, columnIndex);
+        }
     }
 }

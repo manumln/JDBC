@@ -85,26 +85,31 @@ public class Controlador extends Component {
     }
     private void actualizarFila() {
         int row = vista.getTablaDatos().getSelectedRow();
-        if (row >= 0) {
-            String id_usuario = vista.getTablaDatos().getValueAt(row, 0).toString();
-            String nombre = vista.getTablaDatos().getValueAt(row, 1).toString();
-            String dni = vista.getTablaDatos().getValueAt(row, 2).toString();
-            String direccion = vista.getTablaDatos().getValueAt(row, 3).toString();
-            String telefono = vista.getTablaDatos().getValueAt(row, 4).toString();
-            String email = vista.getTablaDatos().getValueAt(row, 5).toString();
-            String rol = vista.getTablaDatos().getValueAt(row, 6).toString();
-            String contrasenna = vista.getTablaDatos().getValueAt(row, 7).toString();
+        //System.out.println("fila: " + row);
+        String sID = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[0];
+        String nombre = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[1];
+        String dni = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[2];
+        String direccion = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[3];
+        String telefono = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[4];
+        String email = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[5];
+        String rol = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[6];
+        String contrasenna = ((ModeloTabla) vista.getTablaDatos().
+                getModel()).getData().get(row)[7];
 
-            System.out.println(id_usuario + "-" + nombre + "-" + dni + "-" + direccion + "-" + telefono + "-" + email + "-" + rol + "-" + contrasenna);
-            int id = Integer.parseInt(id_usuario);
-            Usuario usuario = new Usuario(id, nombre, dni, direccion, telefono, email, rol, contrasenna);
-            try {
-                dao.actualizarUsuarioPorId(usuario, id);
-            } catch (SQLException e) {
-                JOptionPane.showMessageDialog(vista, "Error al actualizar el usuario: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(vista, "No se ha seleccionado ninguna fila.", "Error", JOptionPane.ERROR_MESSAGE);
+       //System.out.println(sID + "-" + nombre + "-" + dni);
+        int id = Integer.parseInt(sID);
+        Usuario usuario = new Usuario(nombre,dni,direccion,telefono,email,rol,contrasenna);
+        try {
+            dao.actualizarUsuarioPorId(usuario, id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
