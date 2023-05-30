@@ -12,8 +12,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Controlador extends Component {
-    private UsuarioDAO dao;
-    private App1 vista;
+    private final UsuarioDAO dao;
+    private final App1 vista;
 
     public Controlador(UsuarioDAO dao, App1 vista) {
         this.dao = dao;
@@ -48,7 +48,7 @@ public class Controlador extends Component {
             if (exito) {
                 JOptionPane.showMessageDialog(vista, "Usuario insertado correctamente");
                 // Actualizar la tabla después de la inserción
-                actualizarFila();
+                actualizarTablaUsuarios();
             } else {
                 JOptionPane.showMessageDialog(vista, "Error al insertar el usuario", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -57,47 +57,70 @@ public class Controlador extends Component {
         }
     }
 
-
-    private void actualizarFila() {
-        JOptionPane.showMessageDialog(null, "Cada vez que cambias ", "alert", JOptionPane.ERROR_MESSAGE);
-        int row = vista.getTablaDatos().getSelectedRow();
-        //System.out.println("fila: " + row);
-        String id_usuario = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[0];
-        String nombre = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[1];
-        String dni = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[2];
-        String direccion = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[3];
-        String telefono = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[4];
-        String email = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[5];
-        String rol = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[6];
-        String contrasenna = ((ModeloTabla) vista.getTablaDatos().
-                getModel()).getData().get(row)[7];
-
-        System.out.println(id_usuario + "-" + nombre + "-" + dni + "-" + direccion + "-" + telefono + "-" + email + "-" + rol + "-" + contrasenna );
-        int id = Integer.parseInt(id_usuario);
-        Usuario usuario = new Usuario(id, nombre,dni,direccion,telefono,email,rol,contrasenna);
+    private void actualizarTablaUsuarios() {
         try {
-            dao.actualizarUsuarioPorId(usuario, id);
+            List<Usuario> usuarios = dao.obtenerTodosLosUsuario(); // Obtener la lista actualizada de usuarios desde la base de datos
+            DefaultTableModel modeloTabla = new DefaultTableModel(); // Crear un nuevo modelo de tabla
+
+            // Definir las columnas de la tabla
+            modeloTabla.addColumn("ID");
+            modeloTabla.addColumn("Nombre");
+            modeloTabla.addColumn("DNI");
+            modeloTabla.addColumn("Dirección");
+            modeloTabla.addColumn("Teléfono");
+            modeloTabla.addColumn("Email");
+            modeloTabla.addColumn("Rol");
+            modeloTabla.addColumn("Contraseña");
+
+            // Llenar la tabla con los datos actualizados
+            for (Usuario usuario : usuarios) {
+                Object[] fila = {usuario.getId_usuario(), usuario.getNombre(), usuario.getDni(), usuario.getDireccion(), usuario.getTelefono(), usuario.getEmail(), usuario.getRol(), usuario.getContrasenna()};
+                modeloTabla.addRow(fila);
+            }
+
+            vista.getTablaDatos().setModel(modeloTabla); // Establecer el nuevo modelo de tabla en la JTable
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            JOptionPane.showMessageDialog(vista, "Error al actualizar la tabla de usuarios: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    private void actualizarFila() {
+        int row = vista.getTablaDatos().getSelectedRow();
+        if (row >= 0) {
+            String id_usuario = vista.getTablaDatos().getValueAt(row, 0).toString();
+            String nombre = vista.getTablaDatos().getValueAt(row, 1).toString();
+            String dni = vista.getTablaDatos().getValueAt(row, 2).toString();
+            String direccion = vista.getTablaDatos().getValueAt(row, 3).toString();
+            String telefono = vista.getTablaDatos().getValueAt(row, 4).toString();
+            String email = vista.getTablaDatos().getValueAt(row, 5).toString();
+            String rol = vista.getTablaDatos().getValueAt(row, 6).toString();
+            String contrasenna = vista.getTablaDatos().getValueAt(row, 7).toString();
+
+            System.out.println(id_usuario + "-" + nombre + "-" + dni + "-" + direccion + "-" + telefono + "-" + email + "-" + rol + "-" + contrasenna);
+            int id = Integer.parseInt(id_usuario);
+            Usuario usuario = new Usuario(id, nombre, dni, direccion, telefono, email, rol, contrasenna);
+            try {
+                dao.actualizarUsuarioPorId(usuario, id);
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(vista, "Error al actualizar el usuario: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(vista, "No se ha seleccionado ninguna fila.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+
+
+
 
     private void borrarFila() {
         int row = vista.getTablaDatos().getSelectedRow(); //fila seleccionada
         String sID = ((ModeloTabla) vista.getTablaDatos().
                 getModel()).getData().get(row)[0]; //obtener la celda del ID
-        int id = Integer.parseInt(sID); //convierto el id de String a int
+        int id_usuario = Integer.parseInt(sID); //convierto el id de String a int
         ((ModeloTabla) vista.getTablaDatos().getModel()).getData().remove(row); //elimino la fila de data
         ((ModeloTabla) vista.getTablaDatos().getModel()).fireTableDataChanged(); //repinta la tabla
         try {
-            dao.eliminarUsuarioPorId(id); //eliminación usuario de la BD
+            dao.eliminarUsuarioPorId(id_usuario); //eliminación usuario de la BD
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
