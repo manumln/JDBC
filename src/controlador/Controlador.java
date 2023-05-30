@@ -108,10 +108,6 @@ public class Controlador extends Component {
         }
     }
 
-
-
-
-
     private void borrarFila() {
         int row = vista.getTablaDatos().getSelectedRow(); //fila seleccionada
         String sID = ((ModeloTabla) vista.getTablaDatos().
@@ -124,7 +120,6 @@ public class Controlador extends Component {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     private void iniciarApp() {

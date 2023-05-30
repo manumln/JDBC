@@ -50,17 +50,15 @@ public class UsuarioDAOImp implements UsuarioDAO{
 
     @Override
     public boolean actualizarUsuarioPorId(Usuario newUsuario, int id) throws SQLException {
-       String sql = "UPDATE usuario SET nombre = ?, dni = ? WHERE id_usuario = ?;";
+       String sql = "UPDATE usuario SET nombre = ?, dni = ?, direccion = ?, telefono = ?, email = ?, rol= ?, contrasenna = ? WHERE id_usuario = ?;";
        PreparedStatement sentencia = conexion.prepareStatement(sql);
-        sentencia.setInt(0, newUsuario.getId_usuario());
         sentencia.setString(1, newUsuario.getNombre());
         sentencia.setString(2, newUsuario.getDni());
         sentencia.setString(3, newUsuario.getDireccion());
         sentencia.setString(4, newUsuario.getTelefono());
-        sentencia.setString(5, newUsuario.getTelefono());
-        sentencia.setString(6, newUsuario.getEmail());
-        sentencia.setString(7, newUsuario.getRol());
-        sentencia.setString(8, newUsuario.getContrasenna());
+        sentencia.setString(5, newUsuario.getEmail());
+        sentencia.setString(6, newUsuario.getRol());
+        sentencia.setString(7, newUsuario.getContrasenna());
        int exito = sentencia.executeUpdate();
        if (sentencia != null)
            sentencia.close();

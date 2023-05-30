@@ -12,10 +12,8 @@ public class App1 extends JFrame {
     private JTextField textoID;
     private JButton botonInsertar;
     private JButton botonBorrar;
-    private JButton botonAtras;
     private JButton botonActualizar;
     private JTable tablaDatos;
-    private JButton botonAvanzar;
     private JTextField textoNombre;
     private JTextField textoDireccion;
     private JTextField textoTelefono;

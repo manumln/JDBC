@@ -133,28 +133,12 @@
           <text value="BORRAR"/>
         </properties>
       </component>
-      <component id="a75d1" class="javax.swing.JButton" binding="botonAtras">
-        <constraints>
-          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="&lt;"/>
-        </properties>
-      </component>
       <component id="1086c" class="javax.swing.JButton" binding="botonActualizar">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="ACTUALIZAR"/>
-        </properties>
-      </component>
-      <component id="1744" class="javax.swing.JButton" binding="botonAvanzar">
-        <constraints>
-          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="&gt;"/>
         </properties>
       </component>
       <grid id="d7b1f" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
